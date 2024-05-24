@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ <meta name="theme-color" content="#008000">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tagihan Saya</title>
+<style>
+.blue-text {
+  color: blue;
+  font-size: 13px;
+  margin-right:-8px;
+  margin-left:7px;
+  font-weight:bold;
+  position:center;
+  
+}
+    img {
+        width: 10%;
+        height: auto;
+        margin-right: 
+        280px;
+        margin-top: 30px;
+    }
+    .button {
+        display: inline-block;
+        padding: 13px 136px; /* Lebar padding disesuaikan */
+        background-color: #008000;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 12px;
+        padding-bottom:13px;
+    }
+    .spaced-text {
+    letter-spacing: 1px; /* Sesuaikan jumlah spasi sesuai kebutuhan */
+    font-size: 13px;
+    font-weight: bold;
+    margin-top:-20px;
+    color: #696969;
+}
+
+</style>
+</head>
+<body>
+<div style="text-align: center;">
+    <img src="https://i.ibb.co.com/7Yvy4j2/1000008504-removebg-preview.png" alt="Foto"><br>
+    <br><br><p class="spaced-text">Jumlah Pinjaman&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rp. 1.116.000</p><br>
+    <p class="spaced-text">Jumlah Pembayaran&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rp. 2.200.000</p>
+    <button class="button" onclick="redirectToPayPage()">Pembayaran</button>
+</div><br><div></div><br><div></div><br>
+<div style="text-align: center;">
+    <img src="https://i.ibb.co.com/sbZKLFy/1000008506-removebg-preview.png" alt="Foto"><br><br>
+    <br>
+    <p class="spaced-text">Jumlah Pinjaman&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rp. 1.116.000</p><br>
+<p class="spaced-text">Jumlah Pembayaran&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rp. 2.200.000</p>
+    <button class="button" onclick="redirectToPayPage2()">Pembayaran</button>
+</div>
+
+<script>
+    function redirectToPayPage() {
+        window.location.href = "abadi1.html"; // Tombol pertama menuju bayar.html
+    }
+
+    function redirectToPayPage2() {
+        window.location.href = "abadi2.html"; // Tombol kedua menuju bayar2.html
+    }
+</script>
+
+</body>
+</html>
