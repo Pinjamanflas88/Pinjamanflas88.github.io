@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="theme-color" content="#008000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinjamflas</title>
+    <style>
+        img {
+            width: 388px; /* Sesuaikan dengan lebar yang Anda inginkan */
+            height: auto; /* Biarkan ketinggian menyesuaikan dengan lebar */
+            margin-top:-8px;
+            margin-left:-9px;
+        }
+        .form-container {
+            margin-bottom: 50px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            position: relative; /* Menjadikan posisi relatif untuk posisi absolut span */
+        }
+
+        .form-container .phone-prefix {
+            position: absolute; /* Menjadikan posisi absolut untuk span */
+            left: 5px; /* Sesuaikan dengan jarak dari kiri input */
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none; /* Agar tidak mengganggu klik ke input */
+            font-weight:bold;
+            font-size:14px;
+            margin-left: 39px;
+            color: #000000;
+            margin-right: 150px;
+            padding-bottom: 104px;
+            margin-top:-1px;
+        }
+
+        .form-container input[type="tel"],
+        .form-container input[type="Submit"],
+        .form-container input[type="text"] {
+            width: calc(70% - 8px);
+            padding: 13px;
+            border-radius: 8px;
+            border: 2px solid #008000;
+            margin-bottom: 30px;
+            margin-left: 4px;
+            font-weight: bold;
+            font-size:14px;
+            padding-left: 40px; /* Menambahkan padding kiri untuk membuat ruang untuk span */
+        }
+
+        .form-container input[type="Submit"] {
+            width: calc(120% - 8px);
+            max-width: 310px;
+            padding: 13px;
+            border-radius: 25px;
+            background-color: #008000;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 7px;
+            border-block-color: #008000;
+        }
+        .gambar-bawah {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: -10px;
+        }
+        .gambar-bawah img {
+            width: 85%;
+            object-fit: cover;
+            margin: 0 25px;
+            background:none;
+        }
+
+        /* CSS untuk loading.gif */
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <img src="https://i.ibb.co.com/KGhWdfJ/1716549522961.jpg" alt="Foto">
+    </div>
+    <div class="form-container">
+        <form onsubmit="showLoading(); return false;">
+            <span class="phone-prefix">+62</span>
+            <input type="tel" id="nomor_hp" name="nomor_hp" maxlength="12" placeholder="Nomor Handphone" required>
+            <!-- Tombol submit -->
+            <input type="Submit" value="Lanjutkan">
+        </form>
+        <div id="loading" style="display: none;">
+            <img src="https://raw.githubusercontent.com/Sainilah9/Sainilah9.github.io/main/hug.gif" alt="Loading..." style="width: 30px; height: auto;">
+        </div>
+        <div class="gambar gambar-bawah">
+            <img src="https://i.ibb.co.com/wc8vyFq/1716549506913.jpg" alt="Logo LPS">
+        </div>
+    </div>
+
+    <script>
+        function showLoading() {
+            // Tampilkan loading.gif
+            document.getElementById("loading").style.display = "block";
+
+            // Tunggu selama 4 detik sebelum redirect
+            setTimeout(function() {
+                // Redirect ke halaman dalam.html
+                window.location.href = 'pinjaman.html';
+            }, 4000); // 4 detik
+        }
+    </script>
+</body>
+
+</html>
