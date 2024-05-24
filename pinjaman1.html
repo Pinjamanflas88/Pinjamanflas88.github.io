@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#008000">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PINJAMAN-SAYA</title>
+<style>
+  .container {
+    background-color: #f0ffff;
+    padding: 15px;
+    width: 352px;
+    margin-left: -7px;
+    display: flex;
+    margin-top: -8px;
+    align-items: center;
+    border-bottom: 5px solid #008000; /* garis hijau tua */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Jarak antara logo dan teks */
+  }
+  
+  .logo {
+    width: 50px; /* Ukuran logo */
+    height: auto;
+    margin-right: 10px; /* Jarak antara logo dan garis bawah */
+    margin-left: 20px; /* Geser logo lebih ke kiri */
+  }
+  
+  .nama {
+    font-size: 20px; /* Ukuran teks nama yang lebih kecil */
+    color: #00090; /* Warna teks hitam */
+  }
+
+  .garis-bawah, .box-lapisan {
+    flex-grow: 10; /* Memungkinkan elemen untuk menyesuaikan lebar yang tersisa */
+    height: 10px; /* Tinggi box lapisan */
+    background-color: #f0ffff; /* Warna lapisan hijau muda */
+  }
+  
+  .box-lapisan {
+    margin-top: -10px; /* Mendorong lapisan hijau ke atas */
+    margin-bottom: -10px; /* Mendorong lapisan hijau ke atas */
+    margin-right: -10px; /* Memperpanjang lapisan hijau ke kanan */
+    margin-left: -10px; /* Memperpanjang lapisan hijau ke kiri */
+  }
+  
+  .menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-top: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none; /* Menghapus tanda garis bawah */
+      color: inherit; /* Menggunakan warna teks bawaan */
+      border-radius:8px;
+      margin-top:11px;
+    }
+
+    .menu-item:first-child {
+      border-top: 1px solid #ccc;
+      border-radius:4px;
+    }
+
+    .menu-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .menu-item .icon {
+      margin-right: 10px;
+      border-radius:8px;
+    }
+  .button {
+    display: inline-block;
+    padding: 20px 20px;
+    background-color: #008000;
+    color: #ccc;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    font-weight: bold;
+  }
+
+  .icon-left,
+  .icon-right {
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .icon-left img,
+  .icon-right img {
+    width: 80px; /* Sesuaikan ukuran ikon di sini */
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .icon-left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .icon-right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .button-text {
+    position: relative;
+    z-index: 0;
+  }
+  .content {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 20px;
+    margin-top:-20px;
+    color:#008000;
+  }
+  .loading-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Mulai tersembunyi */
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo-container">
+    <div class="box-lapisan"></div>
+    <img class="logo" src="https://i.ibb.co.com/HYgFjXr/1000008519-removebg-preview.png" alt="Logo">
+  </div>
+  <div class="nama">
+    PUTRA SAROELI ZEBUA
+  </div>
+  <div class="garis-bawah"></div>
+</div><br>
+<div class="overlay">
+  <div class="content">
+    <p>Total Yang Perlu Pembayaran</p>
+    <h2>Rp. 4.400.000</h2>
+    <!-- Tambahkan informasi total pembayaran di sini -->
+  </div>
+    <div class="menu">
+    <a href="halaman_selanjutnya.html" class="menu-item" onclick="showLoading(this)">
+      <span class="icon"><i class="fas fa-money-check"></i></span>Pinjaman Saya
+    </a>
+    <a href="kamera.html" class="menu-item" onclick="showLoading(this)">
+      <span class="icon"><i class="fas fa-check-circle"></i></span>Persetujuan
+    </a>
+    <a href="pembukaan.html" class="menu-item" onclick="showLoading(this)">
+      <span class="icon"><i class="fas fa-file-alt"></i></span>Pernyataan Pembukaan
+    </a>
+    <a href="pinjaman.html" class="menu-item" onclick="showLoading(this)">
+      <span class="icon"><i class="fas fa-comment"></i></span>Umpan Balik
+    </a>
+    <a href="bank.html" class="menu-item" onclick="showLoading(this)">
+      <span class="icon"><i class="fas fa-credit-card"></i></span>Kartu Bank
+    </a>
+    <a href="pinjaman.html" class="menu-item" onclick="showLoading(this)">
+      <span class="icon"><i class="fas fa-trash-alt"></i></span>Hapus Info Pribadi
+    </a>
+    <a href="index.html" class="menu-item" onclick="showLoading(this)">
+      <span class="icon"><i class="fas fa-sign-out-alt"></i></span>Keluar
+    </a>
+  </div><br>
+
+<button class="button" onclick="handleButtonClick()" disabled>
+  <span class="icon-left" onclick="redirectToLoanPage()">
+    <!-- Letakkan ikon di sini -->
+    <img src="https://i.ibb.co.com/Vv7vfV2/1000008516-removebg-preview-1.png" alt="Icon Kiri">
+  </span>
+  <span class="button-text">Kredit Pinjaman</span>
+  <span class="icon-right" onclick="redirectToSelectionPage()">
+    <!-- Letakkan ikon di sini -->
+    <img src="https://i.ibb.co.com/tbqJmdj/1000008513-removebg-preview-1.png" alt="Icon Kanan">
+  </span>
+</button>
+
+<div class="loading-icon">
+  <img src="https://raw.githubusercontent.com/Sainilah9/Sainilah9.github.io/main/hug.gif" alt="Loading...">
+</div>
+
+<script>
+function redirectToLoanPage() {
+  // Ganti URL dengan halaman pinjaman yang sesuai
+  window.location.href = "pinjaman.html";
+}
+
+function redirectToSelectionPage() {
+  // Ganti URL dengan halaman pilihan yang sesuai
+  window.location.href = "pilihan.html";
+}
+
+function handleButtonClick() {
+  // Fungsi yang akan dijalankan saat tombol diklik
+  alert("Tombol diklik!");
+}
+
+function showLoading(menuItem) {
+  // Tampilkan loading.gif di tengah menu yang diklik
+  var loadingIcon = menuItem.querySelector(".loading-icon");
+  loadingIcon.style.display = "block";
+
+  // Tunggu selama 4 detik sebelum menuju ke halaman berikutnya
+  setTimeout(function() {
+    // Sembunyikan loading.gif
+    loadingIcon.style.display = "none";
+
+    // Cari tautan dalam menu yang diklik dan arahkan ke halaman yang sesuai
+    var link = menuItem.getAttribute("href");
+    window.location.href = link;
+  }, 4000); // 4 detik
+}
+</script>
+</body>
+</html>
