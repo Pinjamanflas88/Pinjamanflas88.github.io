@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#008000">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PINJAMAN SAYA</title>
+<style>
+#gambar-atas {
+      margin-bottom: 20px;
+      padding: 0; /* Menghapus padding */
+    }
+
+    #gambar-atas img {
+      width: 100%; /* Menyesuaikan lebar gambar dengan lebar parent */
+      height: auto; /* Memastikan ketinggian menyesuaikan dengan lebar */
+      margin-top:-10px;
+    }
+
+  .button {
+    display: inline-block;
+    padding: 20px 20px;
+    background-color: #008000;
+    color: #ccc;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    font-weight: bold;
+    margin-top:28px;
+  }
+
+  .icon-left,
+  .icon-right {
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .icon-left img,
+  .icon-right img {
+    width: 80px; /* Sesuaikan ukuran ikon di sini */
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .icon-left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .icon-right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .button-text {
+    position: relative;
+    z-index: 0;
+    margin-top:-20px;
+  }
+  .content {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 20px;
+    margin-top:-20px;
+    color:#008000;
+  }
+  
+  .loading-icon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Mulai tersembunyi */
+  }
+</style>
+</head>
+<body>
+  <div id="gambar-atas">
+    <img src="https://i.ibb.co.com/QHxPNqQ/Screenshot-20240524-185858-Kredit-Digital.jpg" alt="Gambar Atas">
+  </div>
+
+<button class="button" onclick="handleButtonClick()" disabled>
+  <span class="icon-left" onclick="redirectToLoanPage()">
+    <!-- Letakkan ikon di sini -->
+    <img src="https://i.ibb.co.com/tbqJmdj/1000008513-removebg-preview-1.png" alt="Icon Kiri">
+  </span>
+  <span class="button-text">Kredit Pinjaman</span>
+  <span class="icon-right" onclick="redirectToSelectionPage()">
+    <!-- Letakkan ikon di sini -->
+    <img src="https://i.ibb.co.com/Vv7vfV2/1000008516-removebg-preview-1.png" alt="Icon Kanan">
+  </span>
+</button>
+
+<script>
+  function redirectToLoanPage() {
+    // Ganti URL dengan halaman pinjaman yang sesuai
+    window.location.href = "pinjaman.html";
+  }
+
+  function redirectToSelectionPage() {
+    // Ganti URL dengan halaman pilihan yang sesuai
+    window.location.href = "pilihan.html";
+  }
+
+  function handleButtonClick() {
+    // Fungsi yang akan dijalankan saat tombol diklik
+    alert("Tombol diklik!");
+  }
+
+  function showLoading() {
+    var loadingIcon = document.getElementById('loading-icon');
+    loadingIcon.style.display = 'block'; // Menampilkan loading.gif
+
+    // Tunggu selama 4 detik sebelum menuju ke halaman berikutnya
+    setTimeout(function() {
+      // Sembunyikan loading.gif setelah 4 detik
+      loadingIcon.style.display = 'none';
+
+      // Ganti URL dengan halaman yang sesuai setelah loading selesai
+      // Contoh:
+      // window.location.href = 'halaman_baru.html';
+    }, 4000); // 4 detik
+  }
+</script>
+
+<div class="loading-icon">
+  <img src="https://raw.githubusercontent.com/Sainilah9/Sainilah9.github.io/main/hug.gif" alt="Loading...">
+</div>
+
+</body>
+</html>
